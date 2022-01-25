@@ -32,6 +32,8 @@ namespace OTPService
         {
             //Logger Service
             services.AddSingleton<ILoggerManager, LoggerManager>();
+            //Configuration service
+            services.AddSingleton<IConfiguration>(Configuration);
 
             //Domain
             services.AddScoped<IOTP, OTPDomain>();

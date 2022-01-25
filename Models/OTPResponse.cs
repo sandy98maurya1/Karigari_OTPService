@@ -13,6 +13,8 @@ namespace Models
         public bool IsOtpVerified { get; set; }
         public DateTime OtpCreationDate { get; set; }  
         public string ErrorMessage { get; set; }
+        public string Otp { get; set; }
+        public string DeviceId { get; set; }
     }
 }
 

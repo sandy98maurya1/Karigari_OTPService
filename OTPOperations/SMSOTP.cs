@@ -10,7 +10,7 @@ namespace OTPGenerator
         {
             try
             {
-                string otp = UtilitFunctions.GenerateRandomNo(100001,999999).ToString();
+                string otp = UtilitFunctions.GenerateRandomNo(1000,9999).ToString();
 
                 // Find your Account Sid and Auth Token at twilio.com/user/account  
                 const string accountSid = "AXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX";

@@ -17,7 +17,7 @@ namespace Domain
 
         public OTPDomain(IOTPData _otp)
         {
-            otp= _otp;
+            otp = _otp;
         }
 
         public OTPResponse SaveOTP(OtpRequest model)
@@ -39,6 +39,7 @@ namespace Domain
                         Contact = request.ContactNo,
                         IsOtpVerified = false,
                         ErrorMessage = String.Format(Messages.OTPExpired),
+                        Otp = request.OTP
                     };
                 }
             }
@@ -48,7 +49,7 @@ namespace Domain
                 {
                     Contact = request.ContactNo,
                     IsOtpVerified = false,
-                    ErrorMessage = String.Format(Messages.RequiredData,"OTP"),
+                    ErrorMessage = String.Format(Messages.RequiredData, "OTP"),
                 };
             }
 
